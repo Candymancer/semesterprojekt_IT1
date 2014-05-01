@@ -14,6 +14,7 @@ public class UserManager {
 //                  skriv bruger.
             
             // HEJ JAKOB
+            // HEJ EMIL
         }
     
 	public void CheckUserLevel() {
