@@ -12,6 +12,8 @@ public class UserManager {
 //                  initialiser nyt bruger objekt
 //                  tilføj point
 //                  skriv bruger.
+            
+            // HEJ JAKOB
         }
     
 	public void CheckUserLevel() {
