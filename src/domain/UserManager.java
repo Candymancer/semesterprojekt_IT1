@@ -15,9 +15,10 @@ public class UserManager {
                     double points = amount*conversionRate;
                     double userPoints = user.getPointBalance();
                     user.setPointBalance(userPoints+points);
-                    if (user.getPointBalance()==0.00) {
-                        
+                    if (user.getPointBalance()>user.getLevel().getUpperLimit()) {
+                        //smid brugeren op i et højere niveau
                     }
+                    //skriv bruger
                 }
 //                for (hvert transaktion i listen)
 //                  hent bruger

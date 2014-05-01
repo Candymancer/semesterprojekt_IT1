@@ -10,6 +10,14 @@ package domain.userLevel;
  * @author emilfrisk
  */
 public interface UserLevel {
+    
+    public void setLowerLimit(int lowerLimit);
+    
+    public int getLowerLimit();
+    
+    public void setUpperLimit(int higherLimit);
+    
+    public int getUpperLimit();
 
     public void setConversionRate(double conversionRate);
 

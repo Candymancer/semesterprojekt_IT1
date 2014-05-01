@@ -12,14 +12,23 @@ package domain.userLevel;
 public class Bronze implements UserLevel {
 
     private double conversionRate = 1;
-    private int limit = 0;
+    private int lowerLimit = 0;
+    private int upperLimit = 4999;
 
-    public int getLimit() {
-        return limit;
+    public int getLowerLimit() {
+        return lowerLimit;
     }
 
-    public void setLimit(int limit) {
-        this.limit = limit;
+    public void setLowerLimit(int lowerLimit) {
+        this.lowerLimit = lowerLimit;
+    }
+
+    public int getUpperLimit() {
+        return upperLimit;
+    }
+
+    public void setUpperLimit(int upperLimit) {
+        this.upperLimit = upperLimit;
     }
 
     @Override

@@ -13,7 +13,9 @@ package domain.userLevel;
 public class Silver implements UserLevel{
 
     private double conversionRate = 1.5;
-    private int limit = 5000;
+    private int lowerLimit = 5000;
+    private int upperLimit = 9999;
+
     
     @Override
     public void setConversionRate(double conversionRate) {
@@ -25,12 +27,23 @@ public class Silver implements UserLevel{
         return this.conversionRate;
     }
 
-    public int getLimit() {
-        return limit;
+    @Override
+    public int getLowerLimit() {
+        return lowerLimit;
     }
 
-    public void setLimit(int limit) {
-        this.limit = limit;
+    @Override
+    public void setLowerLimit(int lowerLimit) {
+        this.lowerLimit = lowerLimit;
     }
-    
+
+    @Override
+    public int getUpperLimit() {
+        return upperLimit;
+    }
+
+    @Override
+    public void setUpperLimit(int upperLimit) {
+        this.upperLimit = upperLimit;
+    }
 }

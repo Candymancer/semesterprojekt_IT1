@@ -12,16 +12,18 @@ package domain.userLevel;
 public class Gold implements UserLevel {
 
     private double conversionRate = 2;
-    private int limit = 10000;
+    private int lowerLimit = 10000;
 
-    public int getLimit() {
-        return limit;
+    @Override
+    public int getLowerLimit() {
+        return lowerLimit;
     }
 
-    public void setLimit(int limit) {
-        this.limit = limit;
+    @Override
+    public void setLowerLimit(int lowerLimit) {
+        this.lowerLimit = lowerLimit;
     }
-
+ 
     @Override
     public void setConversionRate(double conversionRate) {
         this.conversionRate = conversionRate;
@@ -30,6 +32,15 @@ public class Gold implements UserLevel {
     @Override
     public double getConversionRate() {
         return this.conversionRate;
+    }
+
+    @Override
+    public void setUpperLimit(int higherLimit) {
+    }
+
+    @Override
+    public int getUpperLimit() {
+        return 0;
     }
 
 }
