@@ -12,7 +12,7 @@ package domain.userLevel;
  */
 public interface UserLevel {
     
-        public void setConversionRate();
+        public void setConversionRate(double conversionRate);
         public double getConversionRate();
     
 }
