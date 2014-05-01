@@ -11,7 +11,7 @@ public class UserManager {
                     User user = new User();
                     user.getUser(userId);
                     double amount = transaction.getAmount();
-                    double points = amount*
+                    double points = amount;
                 }
 //                for (hvert transaktion i listen)
 //                  hent bruger
