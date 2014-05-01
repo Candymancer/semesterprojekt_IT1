@@ -11,7 +11,13 @@ public class UserManager {
                     User user = new User();
                     user.getUser(userId);
                     double amount = transaction.getAmount();
-                    double points = amount;
+                    double conversionRate = user.getLevel().getConversionRate();
+                    double points = amount*conversionRate;
+                    double userPoints = user.getPointBalance();
+                    user.setPointBalance(userPoints+points);
+                    if (user.getPointBalance()==0.00) {
+                        
+                    }
                 }
 //                for (hvert transaktion i listen)
 //                  hent bruger

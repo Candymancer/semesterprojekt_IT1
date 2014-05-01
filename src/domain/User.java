@@ -1,13 +1,14 @@
 package domain;
 
+import domain.userLevel.UserLevel;
 import java.util.Date;
 import storage.DatabaseFacade;
 
 public class User {
 
-    private int level;
+    private UserLevel level;
     private Date creationDate;
-    private Point pointBalance;
+    private double pointBalance;
     private double amountSpentThisYear;
     private String name;
     private int userId;
@@ -20,7 +21,7 @@ public class User {
 
     }
 
-    public User(int level, Date creationDate, Point pointBalance, double amountSpentThisYear, String name,
+    public User(UserLevel level, Date creationDate, double pointBalance, double amountSpentThisYear, String name,
             int userId, String macaddress, String email, String tlf, String address) {
         this.level = level;
         this.creationDate = creationDate;
@@ -99,11 +100,11 @@ public class User {
         this.amountSpentThisYear = amountSpentThisYear;
     }
 
-    public Point getPointBalance() {
+    public double getPointBalance() {
         return this.pointBalance;
     }
 
-    public void setPointBalance(Point pointBalance) {
+    public void setPointBalance(double pointBalance) {
         this.pointBalance = pointBalance;
     }
 
@@ -115,11 +116,11 @@ public class User {
         this.creationDate = creationDate;
     }
 
-    public int getLevel() {
+    public UserLevel getLevel() {
         return this.level;
     }
 
-    public void setLevel(int level) {
+    public void setLevel(UserLevel level) {
         this.level = level;
     }
 }
