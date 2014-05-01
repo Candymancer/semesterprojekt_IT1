@@ -14,6 +14,10 @@ public class User {
 	private String email;
 	private String tlf;
 	private String address;
+        
+        public User(){
+            
+        }
 
 	public User(int level, Date creationDate, Point pointBalance, double amountSpentThisYear, String name, 
                 int userId, String macaddress, String email, String tlf, String address) {
@@ -28,6 +32,10 @@ public class User {
                 this.tlf = tlf;
                 this.address = address;
 	}
+        
+        public void getUser(int userId){
+            
+        }
         
         public void write(){
             DatabaseFacade databaseFacade = new DatabaseFacade();
