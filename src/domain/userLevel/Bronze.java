@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package domain.userLevel;
 
 /**
  *
  * @author emilfrisk
  */
-public class Bronze implements UserLevel{
-    double conversionRate = 1.5;
-    
+public class Bronze implements UserLevel {
+
+    double conversionRate = 1;
+
     @Override
     public void setConversionRate(double conversionRate) {
         this.conversionRate = conversionRate;
@@ -22,5 +22,5 @@ public class Bronze implements UserLevel{
     public double getConversionRate() {
         return this.conversionRate;
     }
-    
+
 }

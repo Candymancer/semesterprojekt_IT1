@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package domain.userLevel;
 
 /**
@@ -11,8 +10,9 @@ package domain.userLevel;
  * @author emilfrisk
  */
 public interface UserLevel {
-    
-        public void setConversionRate(double conversionRate);
-        public double getConversionRate();
-    
+
+    public void setConversionRate(double conversionRate);
+
+    public double getConversionRate();
+
 }

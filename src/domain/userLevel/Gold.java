@@ -10,6 +10,17 @@ package domain.userLevel;
  *
  * @author emilfrisk
  */
-public class Gold {
+public class Gold implements UserLevel{
+    double conversionRate = 2;
+
+    @Override
+    public void setConversionRate(double conversionRate) {
+        this.conversionRate = conversionRate;
+    }
+
+    @Override
+    public double getConversionRate() {
+        return this.conversionRate;
+    }
     
 }
