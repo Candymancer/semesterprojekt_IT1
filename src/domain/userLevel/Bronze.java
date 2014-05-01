@@ -11,7 +11,16 @@ package domain.userLevel;
  */
 public class Bronze implements UserLevel {
 
-    double conversionRate = 1;
+    private double conversionRate = 1;
+    private int limit = 0;
+
+    public int getLimit() {
+        return limit;
+    }
+
+    public void setLimit(int limit) {
+        this.limit = limit;
+    }
 
     @Override
     public void setConversionRate(double conversionRate) {
