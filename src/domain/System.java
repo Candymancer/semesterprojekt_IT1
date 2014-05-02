@@ -5,7 +5,7 @@ import java.util.List;
 
 public class System {
         
-	public void receiveTransactions(List<String> transactionList) {
+	public void receiveTransactions(List<List<Object>> transactionList) {
                 //instantiere en transaction manager
 		TransactionManager transactionManager = new TransactionManager();
                 //Parser vores transactionList til til transactionmanageren og får 
