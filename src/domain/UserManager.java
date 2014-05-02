@@ -1,5 +1,8 @@
 package domain;
 
+import domain.userLevel.Bronze;
+import domain.userLevel.Gold;
+import domain.userLevel.Silver;
 import java.util.Date;
 import java.util.List;
 
@@ -16,15 +19,14 @@ public class UserManager {
                     double userPoints = user.getPointBalance();
                     user.setPointBalance(userPoints+points);
                     if (user.getPointBalance()>user.getLevel().getUpperLimit()) {
-                        //smid brugeren op i et højere niveau
+                        if(user.getLevel()==Bronze){
+                            user.setLevel(new Silver());
+                        } else if (user.getLevel()==Silver){
+                            user.setLevel(new Gold());
+                        }
                     }
-                    //skriv bruger
+                    user.write();
                 }
-//                for (hvert transaktion i listen)
-//                  hent bruger
-//                  initialiser nyt bruger objekt
-//                  tilføj point
-//                  skriv bruger.
         }
     
 	public void CheckUserLevel() {
