@@ -6,7 +6,7 @@ import java.util.List;
 public class Facade {
 	public TransactionParser sender_transaktioner;
 
-	public void recieveTransactions(List<String> transactionList) {
+	public void recieveTransactions(List<List<Object>> transactionList) {
                 System system = new System();
                 system.receiveTransactions(transactionList);
 	}
