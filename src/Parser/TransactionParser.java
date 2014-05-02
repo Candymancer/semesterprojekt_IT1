@@ -30,6 +30,11 @@ public class TransactionParser {
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
             if (node instanceof Element) {
+                Transaction transaction = new Transaction();
+                int transactionId = Integer.parseInt(node.getAttributes().getNamedItem("transactionId").getNodeValue());
+                transaction.setTransactionId(transactionId);
+                
+                NodeList childNodes = node.getChildNodes();
                 
             }
         }

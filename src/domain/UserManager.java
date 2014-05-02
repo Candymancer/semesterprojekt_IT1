@@ -19,9 +19,9 @@ public class UserManager {
                     double userPoints = user.getPointBalance();
                     user.setPointBalance(userPoints+points);
                     if (user.getPointBalance()>user.getLevel().getUpperLimit()) {
-                        if(user.getLevel()==Bronze){
+                        if(user.getLevel() instanceof Bronze){
                             user.setLevel(new Silver());
-                        } else if (user.getLevel()==Silver){
+                        } else if (user.getLevel() instanceof Silver){
                             user.setLevel(new Gold());
                         }
                     }

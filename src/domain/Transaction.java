@@ -12,6 +12,10 @@ public class Transaction {
 	private boolean active;
 	private int userId;
         
+        public Transaction(){
+            
+        }
+        
         public Transaction(String type, Date date, int transactionId, double amount, 
                 String store, boolean active, int userId){
                 this.type = type;
