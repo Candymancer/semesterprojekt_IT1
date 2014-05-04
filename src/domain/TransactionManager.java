@@ -34,8 +34,10 @@ public class TransactionManager {
         }
         return l;
     }
-
-    public boolean writeTransactions(List<Transaction> transactionList) {
-        throw new UnsupportedOperationException();
+    
+    public void writeTransactions(List<Transaction> transactionList){
+        for (Transaction transaction : transactionList) {
+            transaction.write();
+        }
     }
 }

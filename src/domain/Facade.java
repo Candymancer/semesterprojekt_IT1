@@ -1,12 +1,10 @@
 package domain;
 
-import Parser.TransactionParser;
 import java.util.List;
 
 public class Facade {
-	public TransactionParser sender_transaktioner;
 
-	public void recieveTransactions(List<List<Object>> transactionList) {
+	public void recieveTransactions(List<Transaction> transactionList) {
                 System system = new System();
                 system.receiveTransactions(transactionList);
 	}

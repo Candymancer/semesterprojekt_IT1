@@ -5,17 +5,16 @@ import java.util.List;
 
 public class System {
         
-	public void receiveTransactions(List<List<Object>> transactionList) {
+	public void receiveTransactions(List<Transaction> transactionList) {
                 //instantiere en transaction manager
 		TransactionManager transactionManager = new TransactionManager();
+                UserManager userManager = new UserManager();
                 //Parser vores transactionList til til transactionmanageren og får 
                 //en List<Transaction> tilbage med transaktions objekterne. Samtidigt med at listen
                 //er blevet formateret fra List<String> til List<Transaction> er transactions objekterne
                 //også blevet skrevet til databasen.
-                List<Transaction> newTransactions = null;
-                newTransactions = transactionManager.createNewTransactions(transactionList);
-                
-                
+                transactionManager.writeTransactions(transactionList);
+                userManager.addPointsToUsers(transactionList);
 	}
 
 	public void checkExpiredTransactions() {

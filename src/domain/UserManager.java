@@ -8,8 +8,8 @@ import java.util.List;
 
 public class UserManager {
 
-        public void addPointsToUsers(List<Transaction> transactions){
-                for (Transaction transaction : transactions) {
+        public void addPointsToUsers(List<Transaction> transactionList){
+                for (Transaction transaction : transactionList) {
                     int userId = transaction.getUserId();
                     User user = new User();
                     user.getUser(userId);
