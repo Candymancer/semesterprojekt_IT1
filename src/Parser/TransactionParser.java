@@ -35,7 +35,16 @@ public class TransactionParser {
                 transaction.setTransactionId(transactionId);
                 
                 NodeList childNodes = node.getChildNodes();
-                
+                for (int j = 0; j < childNodes.getLength(); j++) {
+                    Node cNode = childNodes.item(j);
+                    if (cNode instanceof Element){
+                        String content = cNode.getLastChild().getTextContent().trim();
+                        
+                        switch (cNode.getNodeName()){
+                            
+                        }
+                    }
+                }
             }
         }
         
