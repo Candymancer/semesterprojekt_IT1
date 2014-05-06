@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.Calendar;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class DatabaseFacade {
@@ -21,10 +19,6 @@ public class DatabaseFacade {
         throw new UnsupportedOperationException();
     }
 
-    public ResultSet findUser(int userId) {
-        throw new UnsupportedOperationException();
-    }
-
     public void writeUser() {
         throw new UnsupportedOperationException();
     }
@@ -32,7 +26,7 @@ public class DatabaseFacade {
     public void writeTransaction() {
         throw new UnsupportedOperationException();
     }
-    
+
     private ResultSet executeQuery(String query) {
         Connection con = null;
         Statement st = null;
@@ -51,24 +45,17 @@ public class DatabaseFacade {
             }
         } finally {
             try {
-////                if (rs != null) {
-////                    rs.close();
-////                }
-//                if (st != null) {
-//                    st.close();
-//                }
                 if (con != null) {
                     con.close();
                 }
 
             } catch (SQLException ex) {
-                Logger lgr = Logger.getLogger(DatabaseFacade.class.getName());
-                lgr.log(Level.WARNING, ex.getMessage(), ex);
+                System.out.println("Problemer med database forbindelsen");
             }
         }
         return rs;
     }
-    
+
     public ResultSet getExpiredTransactions() {
 
         Calendar calendar = Calendar.getInstance();
@@ -86,6 +73,23 @@ public class DatabaseFacade {
                 + "WHERE \n"
                 + "  transaction.date >= '" + timestamp + "'\n"
                 + "	AND transaction.date <= '" + timestamp + day + "';";
+
+        ResultSet rs = executeQuery(query);
+
+        if (rs == null) {
+            return null;
+        }
+
+        return rs;
+    }
+
+    public ResultSet findUser(int userId) {
+        String query = "SELECT \n"
+                + "  users.user_id\n"
+                + "FROM \n"
+                + "  public.users\n"
+                + "WHERE \n"
+                + "  users.user_id = "+userId+";";
 
         ResultSet rs = executeQuery(query);
 
