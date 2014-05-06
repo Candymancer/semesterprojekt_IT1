@@ -29,7 +29,7 @@ public class Transaction {
 
 	public void write() {
 		DatabaseFacade databaseFacade = new DatabaseFacade();
-                databaseFacade.writeUser();
+                databaseFacade.writeTransaction();
 	}
 
 	public int getUserId() {
