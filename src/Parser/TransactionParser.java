@@ -3,6 +3,7 @@ package Parser;
 import domain.Transaction;
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -47,10 +48,10 @@ public class TransactionParser {
                                 transaction.setType(content);
                                 break;
                             case "date":
-                                SimpleDateFormat formatter = new SimpleDateFormat("EEEE, MMM dd, yyyy HH:mm:ss a");
+                                SimpleDateFormat formatter = new SimpleDateFormat("EEEE, MMM dd, yyyy HH:mm:ss");
                                 try {
                                     date = formatter.parse(content);
-                                } catch (Exception e) {
+                                } catch (ParseException e) {
                                 }
                                 transaction.setDate(date);
                                 break;
