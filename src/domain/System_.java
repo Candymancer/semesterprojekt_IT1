@@ -15,16 +15,10 @@ public class System_ {
     }
 
     public void checkExpiredTransactions() {
-        List<Transaction> transactionList = null;
-        
         ResultSet rs = databaseFacade.getExpiredTransactions();
-        
-        transactionList = transactionManager.processResultSet(rs);
-        
+        List<Transaction> transactionList = transactionManager.processResultSet(rs);
         userManager.subtractPointsFromUsers(transactionList);
-        
         transactionManager.setTransactionsNotActive(transactionList);
-        
         transactionManager.writeTransactions(transactionList);
     }
 }
