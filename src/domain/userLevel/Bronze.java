@@ -15,18 +15,22 @@ public class Bronze implements UserLevel {
     private int lowerLimit = 0;
     private int upperLimit = 4999;
 
+    @Override
     public int getLowerLimit() {
         return lowerLimit;
     }
 
+    @Override
     public void setLowerLimit(int lowerLimit) {
         this.lowerLimit = lowerLimit;
     }
 
+    @Override
     public int getUpperLimit() {
         return upperLimit;
     }
 
+    @Override
     public void setUpperLimit(int upperLimit) {
         this.upperLimit = upperLimit;
     }

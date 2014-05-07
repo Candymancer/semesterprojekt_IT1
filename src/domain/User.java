@@ -8,7 +8,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 import storage.DatabaseFacade;
-import sun.nio.cs.ext.TIS_620;
 
 public class User {
     DatabaseFacade databaseFacade = new DatabaseFacade();
@@ -69,7 +68,7 @@ public class User {
     }
 
     public void write() {
-        DatabaseFacade databaseFacade = new DatabaseFacade();
+        //TODO
         databaseFacade.writeUser();
     }
 
