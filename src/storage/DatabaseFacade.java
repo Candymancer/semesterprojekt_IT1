@@ -41,7 +41,7 @@ public class DatabaseFacade {
     public void writeTransaction(Transaction transaction) {
         String type = transaction.getType();
         Date date = transaction.getDate();
-        Timestamp dateTimestamp = new Timestamp(0);
+        Timestamp dateTimestamp = new Timestamp(date.getTime());
         int transactionId = transaction.getTransactionId();
         double amount = transaction.getAmount();
         String store = transaction.getStore();
@@ -85,8 +85,9 @@ public class DatabaseFacade {
                     con.close();
                 }
 
-            } catch (SQLException ex) {
-                System.out.println("Problemer med database forbindelsen");
+            } catch (SQLException e) {
+                Logger lgr = Logger.getLogger(DatabaseFacade.class.getName());
+                lgr.log(Level.SEVERE, e.getMessage(), e);
             }
         }
         return rs;
@@ -115,8 +116,9 @@ public class DatabaseFacade {
                     con.close();
                 }
 
-            } catch (SQLException ex) {
-                System.out.println("Problemer med database forbindelsen");
+            } catch (SQLException e) {
+                Logger lgr = Logger.getLogger(DatabaseFacade.class.getName());
+                lgr.log(Level.SEVERE, e.getMessage(), e);
             }
         }
 
@@ -127,18 +129,26 @@ public class DatabaseFacade {
         Calendar calendar = Calendar.getInstance();
 
         int day = (24 * 60 * 60 + 1) * 1000;
+        
+        int year = (365 * 24 * 60 * 60 + 1) * 1000;
+        
+        long tenYears = Long.parseLong("315569259747");
 
-        long time = calendar.getTimeInMillis() - day;
+        long time = calendar.getTimeInMillis();
+        
+        long timeminustenyears = time - tenYears;
 
-        Timestamp timestamp = new Timestamp(time);
+        Timestamp timestampBefore = new Timestamp(timeminustenyears);
+        
+        Timestamp timestampNow = new Timestamp(time);
 
         String query = "SELECT \n"
-                + "  transactions.date\n"
+                + "  transactions.*\n"
                 + "FROM \n"
-                + "  public.transaction\n"
+                + "  transactions\n"
                 + "WHERE \n"
-                + "  transaction.date >= '" + timestamp + "'\n"
-                + "	AND transaction.date <= '" + timestamp + day + "';";
+                + "  transactions.date >= '" + timestampBefore + "'\n"
+                + "	AND transactions.date <= '" + timestampNow+ "';";
 
         ResultSet rs = executeQuery(query);
 

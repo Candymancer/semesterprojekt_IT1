@@ -7,6 +7,7 @@
 package gui;
 
 import Parser.TransactionParser;
+import domain.Facade;
 import domain.System_;
 import domain.Transaction;
 import java.io.File;
@@ -26,13 +27,15 @@ public class SemesterProjekt_IT1 {
      */
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
         TransactionParser transactionParser = new TransactionParser();
-        System_ sys = new System_();
+        Facade facade = new Facade();
         
-        File file = new File("transactions.xml");
+//        File file = new File("transactions.xml");
         
-        List<Transaction> transactionList = transactionParser.readFile(file);
+//        List<Transaction> transactionList = transactionParser.readFile(file);
         
-        sys.receiveTransactions(transactionList);
+//        facade.recieveTransactions(transactionList);
+        
+        facade.checkExpiredTransactions();
     }
     
 }
