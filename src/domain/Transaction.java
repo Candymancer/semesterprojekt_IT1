@@ -12,6 +12,8 @@ public class Transaction {
 	private boolean active;
 	private int userId;
         
+        private DatabaseFacade databaseFacade = null;
+        
         public Transaction(){
             
         }
@@ -28,7 +30,7 @@ public class Transaction {
         }
 
 	public void write() {
-		DatabaseFacade databaseFacade = new DatabaseFacade();
+		databaseFacade = new DatabaseFacade();
                 databaseFacade.writeTransaction(this);
 	}
 
