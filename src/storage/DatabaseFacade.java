@@ -22,33 +22,20 @@ public class DatabaseFacade {
 
     public void writeUser(User user) {
         UserLevel level = user.getLevel();
-        Date creationDate = user.getCreationDate();
-        Timestamp creationDateTimestamp = new Timestamp(creationDate.getTime());
+//        Date creationDate = user.getCreationDate();
+//        Timestamp creationDateTimestamp = new Timestamp(creationDate.getTime());
         double pointBalance = user.getPointBalance();
         double amountSpentThisYear = user.getAmountSpentThisYear();
-        String name = user.getName();
+//        String name = user.getName();
         int userId = user.getUserId();
-        String macaddress = user.getMacadresse();
-        String email = user.getEmail();
-        String tlf = user.getTlf();
-        String address = user.getAddress();
+//        String macaddress = user.getMacadresse();
+//        String email = user.getEmail();
+//        String tlf = user.getTlf();
+//        String address = user.getAddress();
 
-        String query = "insert into users (level, creation_date, point_balance, amount_spent,"
-                + " name, user_id, mac_address, email, tlf, address) values (\n"
-                + "	'" + level.toInt() + "',\n"
-                + "	'" + creationDateTimestamp.toString() + "',\n"
-                + "	" + pointBalance + ",\n"
-                + "	" + amountSpentThisYear + ",\n"
-                + "	'" + name + "',\n"
-                + "	" + userId + ",\n"
-                + "	'" + macaddress + "',\n"
-                + "     '" + email + "',"
-                + "     '" + tlf + "',"
-                + "     '" + address + "'"
-                + "     );\n"
-                + "	";
+        String query = "UPDATE users SET point_balance = " + pointBalance + ", amount_spent = " + amountSpentThisYear + ", level = "+level.toInt()+" WHERE user_id = " + userId + ";";
 
-        ResultSet rs = executeQuery(query);
+        executeUpdate(query);
     }
 
     public void writeTransaction(Transaction transaction) {
@@ -72,7 +59,7 @@ public class DatabaseFacade {
                 + "	);\n"
                 + "	";
 
-        ResultSet rs = executeQuery(query);
+        executeUpdate(query);
     }
 
     private ResultSet executeQuery(String query) {
@@ -103,6 +90,36 @@ public class DatabaseFacade {
             }
         }
         return rs;
+    }
+
+    private void executeUpdate(String query) {
+        Connection con = null;
+        Statement st = null;
+        ResultSet rs = null;
+
+        String url = "jdbc:postgresql://localhost/" + db;
+
+        try {
+            con = DriverManager.getConnection(url, user, password);
+            st = con.createStatement();
+            st.executeUpdate("" + query);
+
+        } catch (SQLException e) {
+            if (e != null) {
+                Logger lgr = Logger.getLogger(DatabaseFacade.class.getName());
+                lgr.log(Level.SEVERE, e.getMessage(), e);
+            }
+        } finally {
+            try {
+                if (con != null) {
+                    con.close();
+                }
+
+            } catch (SQLException ex) {
+                System.out.println("Problemer med database forbindelsen");
+            }
+        }
+
     }
 
     public ResultSet getExpiredTransactions() {
