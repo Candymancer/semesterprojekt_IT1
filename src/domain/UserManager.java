@@ -26,8 +26,9 @@ public class UserManager {
                     user.setLevel(new Silver());
                 } else if (user.getLevel() instanceof Silver) {
                     user.setLevel(new Gold());
-                }
-            }
+                } // User kan ikke gå direkte fra bronze -> guld på 1 transaktion. Dette er dog også usandsynligt da der er
+                 //tale om store beløb
+            } 
             user.write();
         }
     }
