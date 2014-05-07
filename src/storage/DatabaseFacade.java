@@ -1,5 +1,6 @@
 package storage;
 
+import domain.Transaction;
 import domain.User;
 import domain.userLevel.UserLevel;
 import java.sql.Connection;
@@ -50,17 +51,28 @@ public class DatabaseFacade {
 
     }
 
-    public void writeTransaction() {
+    public void writeTransaction(Transaction transaction) {
+        String type = transaction.getType();
+        Date date = transaction.getDate();
+        Timestamp dateTimestamp = new Timestamp(date.getTime());
+        int transactionId = transaction.getTransactionId();
+        double amount = transaction.getAmount();
+        String store = transaction.getStore();
+        boolean active = transaction.getActive();
+        int userId = transaction.getUserId();
+
         String query = "insert into transactions values (\n"
-                + "	'type',\n"
-                + "	timestamp,\n"
-                + "	transaction_id,\n"
-                + "	amount,\n"
-                + "	'store',\n"
-                + "	active,\n"
-                + "	userid\n"
+                + "	'" + type + "',\n"
+                + "	" + dateTimestamp + ",\n"
+                + "	" + transactionId + ",\n"
+                + "	" + amount + ",\n"
+                + "	'" + store + "',\n"
+                + "	" + active + ",\n"
+                + "	" + userId + "\n"
                 + "	);\n"
                 + "	";
+
+        ResultSet rs = executeQuery(query);
     }
 
     private ResultSet executeQuery(String query) {
