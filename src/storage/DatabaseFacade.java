@@ -1,5 +1,6 @@
 package storage;
 
+import domain.User;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -15,11 +16,7 @@ public class DatabaseFacade {
     private final String user = "emilfrisk";
     private final String password = "";
 
-    public void createTransaction() {
-        throw new UnsupportedOperationException();
-    }
-
-    public void writeUser() {
+    public void writeUser(User user) {
         throw new UnsupportedOperationException();
     }
 

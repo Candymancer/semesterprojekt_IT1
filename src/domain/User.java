@@ -10,7 +10,7 @@ import java.util.Date;
 import storage.DatabaseFacade;
 
 public class User {
-    DatabaseFacade databaseFacade = new DatabaseFacade();
+    private DatabaseFacade databaseFacade = new DatabaseFacade();
 
     private UserLevel level;
     private Date creationDate;
@@ -68,8 +68,7 @@ public class User {
     }
 
     public void write() {
-        //TODO
-        databaseFacade.writeUser();
+        databaseFacade.writeUser(this);
     }
 
     public String getAddress() {
