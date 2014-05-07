@@ -11,11 +11,12 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.Date;
-import javax.swing.JOptionPane;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class DatabaseFacade {
 
-    private final String db = "emilfrisk";
+    private final String db = "semesterprojekt";
     private final String user = "emilfrisk";
     private final String password = "";
 
@@ -54,7 +55,7 @@ public class DatabaseFacade {
     public void writeTransaction(Transaction transaction) {
         String type = transaction.getType();
         Date date = transaction.getDate();
-        Timestamp dateTimestamp = new Timestamp(date.getTime());
+        Timestamp dateTimestamp = new Timestamp(0);
         int transactionId = transaction.getTransactionId();
         double amount = transaction.getAmount();
         String store = transaction.getStore();
@@ -63,7 +64,7 @@ public class DatabaseFacade {
 
         String query = "insert into transactions values (\n"
                 + "	'" + type + "',\n"
-                + "	" + dateTimestamp + ",\n"
+                + "	'" + dateTimestamp + "',\n"
                 + "	" + transactionId + ",\n"
                 + "	" + amount + ",\n"
                 + "	'" + store + "',\n"
@@ -89,7 +90,8 @@ public class DatabaseFacade {
 
         } catch (SQLException e) {
             if (e != null) {
-                JOptionPane.showMessageDialog(null, "Fejl"); // lav popup
+                Logger lgr = Logger.getLogger(DatabaseFacade.class.getName());
+                lgr.log(Level.SEVERE, e.getMessage(), e);
             }
         } finally {
             try {

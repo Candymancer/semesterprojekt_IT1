@@ -34,7 +34,7 @@ public class TransactionParser {
             Node node = nodeList.item(i);
             if (node instanceof Element) {
                 Transaction transaction = new Transaction();
-                int transactionId = Integer.parseInt(node.getAttributes().getNamedItem("transactionId").getNodeValue());
+                int transactionId = Integer.parseInt(node.getAttributes().getNamedItem("id").getNodeValue());
                 transaction.setTransactionId(transactionId);
 
                 NodeList childNodes = node.getChildNodes();
@@ -48,7 +48,7 @@ public class TransactionParser {
                                 transaction.setType(content);
                                 break;
                             case "date":
-                                SimpleDateFormat formatter = new SimpleDateFormat("EEEE, MMM dd, yyyy HH:mm:ss");
+                                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                                 try {
                                     date = formatter.parse(content);
                                 } catch (ParseException e) {

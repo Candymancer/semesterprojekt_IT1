@@ -8,9 +8,6 @@
 		<active>true</active>
 		<userId>1</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='2'>
 		<type>store</type>
 		<date>2004-10-19 11:09:22</date>
@@ -19,9 +16,6 @@
 		<active>true</active>
 		<userId>1</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='3'>
 		<type>parkering</type>
 		<date>2004-10-20 09:48:04</date>
@@ -30,9 +24,6 @@
 		<active>true</active>
 		<userId>1</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='4'>
 		<type>store</type>
 		<date>2004-10-20 10:23:54</date>
@@ -41,9 +32,6 @@
 		<active>true</active>
 		<userId>1</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='5'>
 		<type>store</type>
 		<date>2004-10-21 15:09:24</date>
@@ -52,9 +40,6 @@
 		<active>true</active>
 		<userId>1</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='6'>
 		<type>store</type>
 		<date>2004-10-27 16:23:54</date>
@@ -63,9 +48,6 @@
 		<active>true</active>
 		<userId>1</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='7'>
 		<type>parkering</type>
 		<date>2004-11-05 10:20:54</date>
@@ -74,9 +56,6 @@
 		<active>true</active>
 		<userId>1</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='8'>
 		<type>store</type>
 		<date>2004-12-13 12:28:04</date>
@@ -85,9 +64,6 @@
 		<active>true</active>
 		<userId>1</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='9'>
 		<type>store</type>
 		<date>2004-12-16 13:23:54</date>
@@ -96,9 +72,6 @@
 		<active>true</active>
 		<userId>1</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='10'>
 		<type>store</type>
 		<date>2004-12-19 14:43:18</date>
@@ -107,16 +80,6 @@
 		<active>true</active>
 		<userId>1</userId>
 	</transaction>
-</transactions>
-
-
-
-
-
-
-
-
-<transactions>
 	<transaction id='11'>
 		<type>store</type>
 		<date>2005-01-05 10:23:54</date>
@@ -125,9 +88,6 @@
 		<active>true</active>
 		<userId>2</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='12'>
 		<type>parkering</type>
 		<date>2005-01-07 12:23:54</date>
@@ -136,9 +96,6 @@
 		<active>true</active>
 		<userId>2</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='13'>
 		<type>store</type>
 		<date>2005-01-22 15:13:51</date>
@@ -147,9 +104,6 @@
 		<active>true</active>
 		<userId>2</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='14'>
 		<type>store</type>
 		<date>2005-02-02 09:00:16</date>
@@ -158,9 +112,6 @@
 		<active>true</active>
 		<userId>2</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='15'>
 		<type>store</type>
 		<date>2005-02-10 10:23:54</date>
@@ -169,9 +120,6 @@
 		<active>true</active>
 		<userId>2</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='16'>
 		<type>store</type>
 		<date>2005-03-03 11:27:24</date>
@@ -180,9 +128,6 @@
 		<active>true</active>
 		<userId>2</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='17'>
 		<type>parkering</type>
 		<date>2005-04-04 13:47:08</date>
@@ -191,9 +136,6 @@
 		<active>true</active>
 		<userId>2</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='18'>
 		<type>store</type>
 		<date>2005-07-19 16:16:16</date>
@@ -202,9 +144,6 @@
 		<active>true</active>
 		<userId>2</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='19'>
 		<type>store</type>
 		<date>2005-09-19 14:14:14</date>
@@ -213,9 +152,6 @@
 		<active>true</active>
 		<userId>2</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='20'>
 		<type>store</type>
 		<date>2005-10-10 10:10:10</date>
@@ -224,16 +160,6 @@
 		<active>true</active>
 		<userId>2</userId>
 	</transaction>
-</transactions>
-
-
-
-
-
-
-
-
-<transactions>
 	<transaction id='21'>
 		<type>store</type>
 		<date>2006-01-01 10:10:10</date>
@@ -242,9 +168,6 @@
 		<active>true</active>
 		<userId>3</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='22'>
 		<type>store</type>
 		<date>2006-02-02 10:10:10</date>
@@ -253,9 +176,6 @@
 		<active>true</active>
 		<userId>3</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='23'>
 		<type>store</type>
 		<date>2006-03-03 10:10:10</date>
@@ -264,9 +184,6 @@
 		<active>true</active>
 		<userId>3</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='24'>
 		<type>store</type>
 		<date>2006-04-04 10:10:10</date>
@@ -275,9 +192,6 @@
 		<active>true</active>
 		<userId>3</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='25'>
 		<type>store</type>
 		<date>2006-05-05 10:10:10</date>
@@ -286,9 +200,6 @@
 		<active>true</active>
 		<userId>3</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='26'>
 		<type>store</type>
 		<date>2006-06-06 10:10:10</date>
@@ -297,9 +208,6 @@
 		<active>true</active>
 		<userId>3</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='27'>
 		<type>store</type>
 		<date>2006-07-07 10:10:10</date>
@@ -308,9 +216,6 @@
 		<active>true</active>
 		<userId>3</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='28'>
 		<type>store</type>
 		<date>2006-08-08 10:10:10</date>
@@ -319,9 +224,6 @@
 		<active>true</active>
 		<userId>3</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='29'>
 		<type>store</type>
 		<date>2006-09-09 10:10:10</date>
@@ -330,9 +232,6 @@
 		<active>true</active>
 		<userId>3</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='30'>
 		<type>store</type>
 		<date>2006-10-10 10:10:10</date>
@@ -341,14 +240,6 @@
 		<active>true</active>
 		<userId>3</userId>
 	</transaction>
-</transactions>
-
-
-
-
-
-
-<transactions>
 	<transaction id='31'>
 		<type>parkering</type>
 		<date>2013-01-02 15:16:17</date>
@@ -357,9 +248,6 @@
 		<active>true</active>
 		<userId>4</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='32'>
 		<type>Store</type>
 		<date>2013-02-03 08:09:10</date>
@@ -368,9 +256,6 @@
 		<active>true</active>
 		<userId>4</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='33'>
 		<type>store</type>
 		<date>2013-03-04 09:10:11</date>
@@ -379,9 +264,6 @@
 		<active>true</active>
 		<userId>4</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='34'>
 		<type>store</type>
 		<date>2013-04-05 10:11:12</date>
@@ -390,9 +272,6 @@
 		<active>true</active>
 		<userId>4</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='35'>
 		<type>store</type>
 		<date>2013-05-06 11:12:13</date>
@@ -401,9 +280,6 @@
 		<active>true</active>
 		<userId>4</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='36'>
 		<type>store</type>
 		<date>2013-06-07 12:13:14</date>
@@ -412,9 +288,6 @@
 		<active>true</active>
 		<userId>4</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='37'>
 		<type>parkering</type>
 		<date>2013-07-08 13:14:15</date>
@@ -423,9 +296,6 @@
 		<active>true</active>
 		<userId>4</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='38'>
 		<type>store</type>
 		<date>2013-08-09 14:15:16</date>
@@ -434,9 +304,6 @@
 		<active>true</active>
 		<userId>4</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='39'>
 		<type>store</type>
 		<date>2013-09-10 15:16:17</date>
@@ -445,9 +312,6 @@
 		<active>true</active>
 		<userId>4</userId>
 	</transaction>
-</transactions>
-
-<transactions>
 	<transaction id='40'>
 		<type>parkering</type>
 		<date>2013-11-11 11:11:11</date>
