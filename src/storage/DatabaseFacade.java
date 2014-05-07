@@ -35,7 +35,7 @@ public class DatabaseFacade {
 
         String query = "insert into users (level, creation_date, point_balance, amount_spent,"
                 + " name, user_id, mac_address, email, tlf, address) values (\n"
-                + "	'" + level.toString() + "',\n"
+                + "	'" + level.toInt() + "',\n"
                 + "	'" + creationDateTimestamp.toString() + "',\n"
                 + "	" + pointBalance + ",\n"
                 + "	" + amountSpentThisYear + ",\n"
@@ -49,7 +49,6 @@ public class DatabaseFacade {
                 + "	";
 
         ResultSet rs = executeQuery(query);
-
     }
 
     public void writeTransaction(Transaction transaction) {
@@ -135,7 +134,7 @@ public class DatabaseFacade {
 
     public ResultSet findUser(int userId) {
         String query = "SELECT \n"
-                + "  users.user_id\n"
+                + "  users.*\n"
                 + "FROM \n"
                 + "  public.users\n"
                 + "WHERE \n"

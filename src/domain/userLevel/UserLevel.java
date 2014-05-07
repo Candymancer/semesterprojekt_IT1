@@ -23,7 +23,6 @@ public interface UserLevel {
 
     public double getConversionRate();
     
-    @Override
-    public String toString();
+    public int toInt();
 
 }

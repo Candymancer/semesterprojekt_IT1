@@ -60,7 +60,7 @@ public class User {
             this.macaddress = rs.getString("mac_address");
             this.email = rs.getString("email");
             this.tlf = rs.getString("tlf");
-            this.address = rs.getString(address);
+            this.address = rs.getString("address");
         }
         } catch (SQLException e){
             System.out.println("Fejl med database");

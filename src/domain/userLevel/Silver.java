@@ -45,8 +45,7 @@ public class Silver implements UserLevel {
         this.upperLimit = upperLimit;
     }
 
-    @Override
-    public String toString() {
-        return this.getClass().getName();
+    public int toInt() {
+        return 2;
     }
 }

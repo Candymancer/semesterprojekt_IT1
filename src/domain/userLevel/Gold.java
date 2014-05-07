@@ -43,9 +43,8 @@ public class Gold implements UserLevel {
         return 0;
     }
     
-    @Override
-    public String toString(){
-        return this.getClass().getName();
+    public int toInt(){
+        return 3;
     }
 
 }
