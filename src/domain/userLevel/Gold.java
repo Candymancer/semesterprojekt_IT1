@@ -42,5 +42,10 @@ public class Gold implements UserLevel {
     public int getUpperLimit() {
         return 0;
     }
+    
+    @Override
+    public String toString(){
+        return this.getClass().getName();
+    }
 
 }

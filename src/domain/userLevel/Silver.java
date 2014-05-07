@@ -3,20 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package domain.userLevel;
 
 /**
  *
  * @author emilfrisk
  */
-public class Silver implements UserLevel{
+public class Silver implements UserLevel {
 
     private double conversionRate = 1.5;
     private int lowerLimit = 5000;
     private int upperLimit = 9999;
 
-    
     @Override
     public void setConversionRate(double conversionRate) {
         this.conversionRate = conversionRate;
@@ -45,5 +43,10 @@ public class Silver implements UserLevel{
     @Override
     public void setUpperLimit(int upperLimit) {
         this.upperLimit = upperLimit;
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getName();
     }
 }

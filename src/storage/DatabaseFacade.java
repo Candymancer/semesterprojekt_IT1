@@ -1,6 +1,7 @@
 package storage;
 
 import domain.User;
+import domain.userLevel.UserLevel;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -8,6 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.Calendar;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 public class DatabaseFacade {
@@ -17,11 +19,48 @@ public class DatabaseFacade {
     private final String password = "";
 
     public void writeUser(User user) {
-        throw new UnsupportedOperationException();
+        UserLevel level = user.getLevel();
+        Date creationDate = user.getCreationDate();
+        Timestamp creationDateTimestamp = new Timestamp(creationDate.getTime());
+        double pointBalance = user.getPointBalance();
+        double amountSpentThisYear = user.getAmountSpentThisYear();
+        String name = user.getName();
+        int userId = user.getUserId();
+        String macaddress = user.getMacadresse();
+        String email = user.getEmail();
+        String tlf = user.getTlf();
+        String address = user.getAddress();
+
+        String query = "insert into users (level, creation_date, point_balance, amount_spent,"
+                + " name, user_id, mac_address, email, tlf, address) values (\n"
+                + "	'" + level.toString() + "',\n"
+                + "	'" + creationDateTimestamp.toString() + "',\n"
+                + "	" + pointBalance + ",\n"
+                + "	" + amountSpentThisYear + ",\n"
+                + "	'" + name + "',\n"
+                + "	" + userId + ",\n"
+                + "	'" + macaddress + "',\n"
+                + "     '" + email + "',"
+                + "     '" + tlf + "',"
+                + "     '" + address + "'"
+                + "     );\n"
+                + "	";
+
+        ResultSet rs = executeQuery(query);
+
     }
 
     public void writeTransaction() {
-        throw new UnsupportedOperationException();
+        String query = "insert into transactions values (\n"
+                + "	'type',\n"
+                + "	timestamp,\n"
+                + "	transaction_id,\n"
+                + "	amount,\n"
+                + "	'store',\n"
+                + "	active,\n"
+                + "	userid\n"
+                + "	);\n"
+                + "	";
     }
 
     private ResultSet executeQuery(String query) {
@@ -86,7 +125,7 @@ public class DatabaseFacade {
                 + "FROM \n"
                 + "  public.users\n"
                 + "WHERE \n"
-                + "  users.user_id = "+userId+";";
+                + "  users.user_id = " + userId + ";";
 
         ResultSet rs = executeQuery(query);
 

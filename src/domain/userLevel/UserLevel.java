@@ -22,5 +22,8 @@ public interface UserLevel {
     public void setConversionRate(double conversionRate);
 
     public double getConversionRate();
+    
+    @Override
+    public String toString();
 
 }

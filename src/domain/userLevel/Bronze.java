@@ -45,4 +45,9 @@ public class Bronze implements UserLevel {
         return this.conversionRate;
     }
 
+    @Override
+    public String toString() {
+        return this.getClass().getName();
+    }
+
 }
