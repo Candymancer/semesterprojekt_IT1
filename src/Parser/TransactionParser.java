@@ -24,7 +24,7 @@ public class TransactionParser {
 
         DocumentBuilder builder = factory.newDocumentBuilder();
 
-        Document document = builder.parse(f);
+        Document document = builder.parse(f); //
 
         List<Transaction> transactionList = new ArrayList<>();
 
