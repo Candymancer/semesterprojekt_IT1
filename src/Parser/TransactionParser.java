@@ -22,7 +22,7 @@ public class TransactionParser {
     public List<Transaction> readFile(File f) throws ParserConfigurationException, SAXException, IOException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
-        DocumentBuilder builder = factory.newDocumentBuilder();
+        DocumentBuilder builder = factory.newDocumentBuilder(); // test
 
         Document document = builder.parse(f); //
 
